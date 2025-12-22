@@ -7,6 +7,11 @@ public class Main {
         gym.openGym();
         member.train();
         trainer.conductTraining(member);
+
+
+        System.out.println("Member age: " + member.getAge());
+        member.setWeight(77.0);
+        System.out.println("Member new weight: " + member.getWeight());
     }
 }
 
