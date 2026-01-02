@@ -2,51 +2,32 @@ public class Trainer {
     private String name;
     private int experienceYears;
     private String specialization;
-    private double salary;
 
-    public Trainer(String name, int experienceYears, String specialization, double salary) {
-        this.name = name;
-        this.experienceYears = experienceYears;
+    public Trainer(String name, int experienceYears, String specialization) {
+        setName(name);
+        setExperienceYears(experienceYears);
         this.specialization = specialization;
-        this.salary = salary;
     }
-
-
-    public String getName() {
-        return name;
-    }
-
-    public int getExperienceYears() {
-        return experienceYears;
-    }
-
-    public String getSpecialization() {
-        return specialization;
-    }
-
-    public double getSalary() {
-        return salary;
-    }
-
 
     public void setName(String name) {
+        if (name == null || name.isBlank()) {
+            throw new IllegalArgumentException("Trainer name cannot be empty");
+        }
         this.name = name;
     }
 
     public void setExperienceYears(int experienceYears) {
+        if (experienceYears < 0) {
+            throw new IllegalArgumentException("Experience cannot be negative");
+        }
         this.experienceYears = experienceYears;
     }
 
-    public void setSpecialization(String specialization) {
-        this.specialization = specialization;
-    }
+    public String getName() { return name; }
 
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-
-    public void conductTraining(Member member) {
-        System.out.println(name + " trains " + member.getName());
+    @Override
+    public String toString() {
+        return String.format("%-10s | Experience: %-2d years | Specialization: %s",
+                name, experienceYears, specialization);
     }
 }
-
