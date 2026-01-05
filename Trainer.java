@@ -1,5 +1,4 @@
 public class Trainer extends Person {
-
     private int experienceYears;
     private String specialization;
 
