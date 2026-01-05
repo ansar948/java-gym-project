@@ -1,5 +1,4 @@
 public class Member extends Person {
-
     private double weight;
     private boolean hasMembership;
 
@@ -16,7 +15,9 @@ public class Member extends Person {
 
     public void train() {
         if (hasMembership) {
-            System.out.println(name + " is training");
+            System.out.println(name + " is training!");
+        } else {
+            System.out.println(name + " cannot train without membership.");
         }
     }
 }
