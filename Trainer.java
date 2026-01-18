@@ -1,4 +1,5 @@
 public class Trainer extends Person {
+
     private int experienceYears;
     private String specialization;
 
@@ -10,6 +11,7 @@ public class Trainer extends Person {
 
     @Override
     public String getRole() {
+
         return "Trainer";
     }
 
