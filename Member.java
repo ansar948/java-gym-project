@@ -1,4 +1,5 @@
 public class Member extends Person {
+
     private double weight;
     private boolean hasMembership;
 
